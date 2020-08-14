@@ -14,14 +14,11 @@ class ShowNamesFromGit extends React.Component {
   render() {
     const allData = this.props.issuesList;
     if(allData.issuesList) return null;
-    // const name = allData && allData.map(item => [item.name, item.full_name]);
-    // console.log(allData);
     return (
-    <div>
+    <div className="wrapper">
       {allData.map((item, index) => {
-        // const [firstName, fullme] = item.split(" ");
         const key = item+index;
-        return <div key={key}>
+        return <div key={key} className="issue">
         <p>{item}</p>
         </div>
       })

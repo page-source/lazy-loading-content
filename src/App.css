@@ -4,12 +4,12 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 40px;
 }
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 80px;
   padding: 20px;
   color: white;
 }
@@ -39,4 +39,17 @@ button {
   background-color: #444;
   border: none;
   color: white;
+}
+
+.issue {
+  border: 1px solid gray;
+  margin-bottom: 10px;
+  text-align: left;
+  padding-left: 10px;
+  font-weight: 600;
+}
+
+.wrapper {
+  width: 89%;
+  margin: 0 auto;
 }
