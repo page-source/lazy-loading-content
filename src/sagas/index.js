@@ -1,4 +1,4 @@
-import { watchCounter } from "./counter";
+import { watchCounter } from "./saga";
 import { all } from "redux-saga/effects";
 
 // single entry point to start all Sagas at once

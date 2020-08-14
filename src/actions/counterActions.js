@@ -9,8 +9,8 @@ export const FETCH_COMPLETE = "FETCH_COMPLETE";
  * action creators
  */
 
-export function fetchIssues() {
-  return { type: FETCH_ISSUES };
+export function fetchIssues(page) {
+  return { type: FETCH_ISSUES, payload: page };
 }
 
 export function fetchComplete(action) {

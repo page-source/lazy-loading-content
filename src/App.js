@@ -4,7 +4,7 @@ import "./App.css";
 import { Provider } from "react-redux";
 import configureStore from "./store";
 
-import CounterComponent from "./components/counter";
+import IssuesComponent from "./components/component";
 
 const store = configureStore();
 
@@ -20,7 +20,7 @@ class App extends Component {
           <p className="App-intro">
             <b>Assignment for OfBusiness</b>
           </p>
-          <CounterComponent />
+          <IssuesComponent />
         </div>
       </Provider>
     );

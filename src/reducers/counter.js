@@ -7,11 +7,7 @@ const initialState = {
 export const githubIssues = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_COMPLETE:
-      return state.issuesList.issuesList = action.payload;
-      // return state.issuesList;
-     // case AVATAR_UPDATED :
-    // return state.avatar + action.payload;
-    // return
+      return state.issuesList = action.payload;
     default:
       return state;
   }
