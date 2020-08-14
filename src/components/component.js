@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { fetchIssues } from "../actions/counterActions";
+import { fetchIssues } from "../actions";
 
 const ListGitHubIssues = ({issuesListProp, getNames}) => {
 

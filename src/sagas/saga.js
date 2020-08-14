@@ -1,4 +1,4 @@
-import { FETCH_ISSUES, fetchComplete } from "../actions/counterActions";
+import { FETCH_ISSUES, fetchComplete } from "../actions";
 import { put, takeEvery, call } from "redux-saga/effects";
 
 export function* fetchIssues(params) {
@@ -9,7 +9,7 @@ export function* fetchIssues(params) {
   yield put(fetchComplete(issuesTitle))
 }
 
-export function* watchCounter() {
+export function* issuesListSaga() {
   yield takeEvery(FETCH_ISSUES, fetchIssues);
 }
 

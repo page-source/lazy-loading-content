@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { githubIssues } from "./counter";
+import { githubIssues } from "./reducer";
 
 export const rootReducer = combineReducers({
   githubIssues
