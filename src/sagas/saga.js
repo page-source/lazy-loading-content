@@ -1,4 +1,4 @@
-import { FETCH_ISSUES, fetchComplete } from "../actions";
+import { FETCH_ISSUES, fetchComplete } from "../actions/actions";
 import { put, takeEvery, call } from "redux-saga/effects";
 
 export function* fetchIssues(params) {

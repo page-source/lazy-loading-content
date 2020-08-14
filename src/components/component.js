@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { fetchIssues } from "../actions";
+import { fetchIssues } from "../actions/actions";
 
 const ListGitHubIssues = ({issuesListProp, getNames}) => {
 
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
 
-  let needToHitApi = false; /* Variable which is checking if we need to API at current position or not */
+  /* Variable which is checking if we need to API at current position or not */
+  let needToHitApi = false;
 
   /**
    * Attaching the event listener on componentDidMount
@@ -48,7 +49,6 @@ const ListGitHubIssues = ({issuesListProp, getNames}) => {
       <div className="wrapper">
         {renderIssues(data)}
       </div>
-      <div id="bottomDiv"></div>
     </React.Fragment>
   )
 

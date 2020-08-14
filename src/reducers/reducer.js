@@ -1,4 +1,4 @@
-import { FETCH_COMPLETE } from "../actions";
+import { FETCH_COMPLETE } from "../actions/actions";
 
 const initialState = {
   issuesList: [],

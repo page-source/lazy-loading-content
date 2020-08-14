@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import App from './App';
+import Issues from './components/component'
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+it('component contains Issues List Component', () => {
+  const wrapper = shallow(<App />);
+  expect(wrapper.contains(<Issues/>)).toEqual(true);
 });
