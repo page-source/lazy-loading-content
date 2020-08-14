@@ -1,4 +1,4 @@
-import { FETCH_ISSUES, fetchComplete, UPDATE_AVATAR, putAvatar } from "../actions/counterActions";
+import { FETCH_ISSUES, fetchComplete } from "../actions/counterActions";
 import { put, takeEvery, call } from "redux-saga/effects";
 
 

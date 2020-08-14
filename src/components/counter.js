@@ -1,32 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { fetchIssues, updateAvatar } from "../actions/counterActions";
+import { fetchIssues } from "../actions/counterActions";
 
-class ShowNamesFromGit extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const ListGitHubIssues = ({issuesList, getNames}) => {
 
-  componentDidMount() {
-    this.props.getNames();
-  }
+  useEffect (() => {
+    getNames();
+  }, []);
 
-  render() {
-    const allData = this.props.issuesList;
-    if(allData.issuesList) return null;
-    return (
-    <div className="wrapper">
-      {allData.map((item, index) => {
+  const allData = issuesList;
+  if(allData.issuesList) return null;
+  return (
+  <div className="wrapper">
+    { allData.map((item, index) => {
         const key = item+index;
         return <div key={key} className="issue">
         <p>{item}</p>
         </div>
       })
+    }
+  </div>
+  )
 
-      }
-    </div>
-    )
-  }
 }
 const mapStateToProps = state => {
   return {
@@ -39,13 +34,10 @@ const mapDispatchToProps = dispatch => {
     getNames: () => {
       dispatch(fetchIssues());
     },
-    // getAvatar: firstName => {
-    //   dispatch(updateAvatar(firstName));
-    // }
   };
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ShowNamesFromGit);
+)(ListGitHubIssues);

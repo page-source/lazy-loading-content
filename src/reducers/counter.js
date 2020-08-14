@@ -1,4 +1,4 @@
-import { FETCH_COMPLETE, AVATAR_UPDATED } from "../actions/counterActions";
+import { FETCH_COMPLETE } from "../actions/counterActions";
 
 const initialState = {
   issuesList: [],

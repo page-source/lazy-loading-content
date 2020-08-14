@@ -53,3 +53,7 @@ button {
   width: 89%;
   margin: 0 auto;
 }
+
+.issue p {
+  font-size: 15px;
+}
