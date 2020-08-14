@@ -1,42 +1,54 @@
 import React from "react";
 import { connect } from "react-redux";
-import { updateCounter } from "../actions/counterActions";
+import { fetchIssues, updateAvatar } from "../actions/counterActions";
 
-//The value that the counter will increase/decrease per click
-const counterStep = 1;
+class ShowNamesFromGit extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-const CounterComponent = props => {
-  return (
+  componentDidMount() {
+    this.props.getNames();
+  }
+
+  render() {
+    const allData = this.props.issuesList;
+    if(allData.issuesList) return null;
+    // const name = allData && allData.map(item => [item.name, item.full_name]);
+    // console.log(allData);
+    return (
     <div>
-      <h2>{props.counter}</h2>
-      <button type="button" onClick={props.decrement}>
-        -
-      </button>
-      <button type="button" onClick={props.increment}>
-        +
-      </button>
-    </div>
-  );
-};
+      {allData.map((item, index) => {
+        // const [firstName, fullme] = item.split(" ");
+        const key = item+index;
+        return <div key={key}>
+        <p>{item}</p>
+        </div>
+      })
 
+      }
+    </div>
+    )
+  }
+}
 const mapStateToProps = state => {
   return {
-    counter: state.counterReducer
+    issuesList: state.githubIssues
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    increment: () => {
-      dispatch(updateCounter(counterStep));
+    getNames: () => {
+      dispatch(fetchIssues());
     },
-    decrement: () => {
-      dispatch(updateCounter(-counterStep));
-    }
+    // getAvatar: firstName => {
+    //   dispatch(updateAvatar(firstName));
+    // }
   };
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(CounterComponent);
+)(ShowNamesFromGit);

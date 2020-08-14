@@ -15,15 +15,10 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to CRA-REDUX-SAGA-TEMPLATE</h1>
+            <h1 className="App-title">Listing Github Issues from a Repo</h1>
           </header>
           <p className="App-intro">
-            Try the 1 second delayed counter below. All powererd by
-            <b> Create-React-App, Redux, Redux-Saga</b>
-          </p>
-          <p>
-            Try clicking the Button below with the Redux Chrome Extension
-            Installed
+            <b>Assignment for OfBusiness</b>
           </p>
           <CounterComponent />
         </div>

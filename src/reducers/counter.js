@@ -1,12 +1,17 @@
-import { UPDATE_COMPLETE } from "../actions/counterActions";
+import { FETCH_COMPLETE, AVATAR_UPDATED } from "../actions/counterActions";
 
-const initialState = 0;
+const initialState = {
+  issuesList: [],
+};
 
-export const counterReducer = (state = initialState, action) => {
+export const githubIssues = (state = initialState, action) => {
   switch (action.type) {
-    case UPDATE_COMPLETE:
-      return state + action.payload;
-
+    case FETCH_COMPLETE:
+      return state.issuesList.issuesList = action.payload;
+      // return state.issuesList;
+     // case AVATAR_UPDATED :
+    // return state.avatar + action.payload;
+    // return
     default:
       return state;
   }
