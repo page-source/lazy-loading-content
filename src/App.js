@@ -17,9 +17,6 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">Listing Github Issues from a Repo</h1>
           </header>
-          <p className="App-intro">
-            <b>Assignment for Of Business</b>
-          </p>
           <IssuesComponent />
         </div>
       </Provider>
