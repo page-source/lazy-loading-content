@@ -1,4 +1,4 @@
-# ofbusiness-assignment-aug-2020
+# Lazy Loading Content
 
 ![App](/public/screenshot-app.png)
 
